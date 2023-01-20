@@ -110,6 +110,7 @@ function checkAnswer(event) {
         endQuiz();
     }
 }};
+
 // Get the submit button element
 const submitButton = document.getElementById("submit");
 
@@ -123,5 +124,14 @@ let currentPlayer ={
     initials:userInitials,
     userScore:score
 
-}}
+}
 
+// store these details to an storedHighscore array 
+storedHighscore.push(currentPlayer);
+
+//store value in local storage as a string
+localStorage.setItem("highScore",JSON.stringify(storedHighscore))
+
+//  reload the page to start quiz again
+location.reload()
+}
