@@ -1,29 +1,29 @@
-// Questions array and object  
+//This is the Questions array with answers to the quiz 
 var questions = [
     {
-        title: "What year did the battle of Hastings take place?",
-        choices: ["1888", "1066", "1415", "1106"],
-        answer: "1066"
+        title: "What is DOM?",
+        choices: ["Document Object Model", "Domain Object Model", "Document Operations Module", "Data Object Model"],
+        answer: "Document Object Model"
     },
     {
-        title: "How many wives did Henry VIII have?",
-        choices: ["six", "one", "five", "seven"],
-        answer: "six"
+        title: "What is NaN?",
+        choices: ["Node Abstract Number", "Not A Number", "New Abstract Notation", "Node Abstract Notation"],
+        answer: "Not A Number"
     },
     {
-        title: "What was the nickname given to Margaret Thatcher?",
-        choices: ["Coal Lady", "Iron Lady", "Queen Mags", "all of the above"],
-        answer: "Iron Lady"
+        title: " Arrow functions can only be used as a ____ expression. ",
+        choices: ["number ", "variable", "function", "none of the above"],
+        answer: "function"
     },
     {
-        title: "Which party was Gordon Brown the leader of?",
-        choices: ["Labour Party", "Lib Dems", "Conservatives", "Green Party"],
-        answer: "Labour Party"
+        title: "Which of these is a looping structure in Javascript?",
+        choices: ["for", "while", "Do-while", "all of the above"],
+        answer: "all of the above"
     },
     {
-        title: "Who founded the Church of England?",
-        choices: ["Richard I", "Henry VIII", "Richard III", "Edward The Martyr"],
-        answer: "Henry VIII"
+        title: " Which company developed JavaScript?",
+        choices: ["Amazon", "Microsoft", "Netscape", "Google"],
+        answer: "Netscape"
     },
 
 ];
