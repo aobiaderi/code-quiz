@@ -78,3 +78,50 @@ function displayQuestion() {
   }
 }
 
+// check if the answer is correct and update the feedback element with a message
+function checkAnswer(event) {
+    document.getElementById("feedback").style.display = "block";
+    const answer = event.target.innerHTML;
+    if (answer === questions[currentQuestion].answer) {
+        // play sound for correct answer
+        correctSound.play()
+      document.getElementById("feedback").innerHTML = "Correct!";
+      currentQuestion++;
+    
+      if (currentQuestion < questions.length) {
+        displayQuestion();
+         
+      } else {
+        endQuiz();
+      }
+    } else {
+        // play sound for correct answer
+        incorrectSound.play()
+      document.getElementById("feedback").innerHTML = "Incorrect!";
+         //checks and then continues quiz if that is not the last question
+    if (currentQuestion < questions.length) {
+        displayQuestion();
+        // apply penalty per incorrect answer
+        if(timer > 0) 
+            timer -=10;
+            currentQuestion++;
+    
+    } else {
+        endQuiz();
+    }
+}};
+// Get the submit button element
+const submitButton = document.getElementById("submit");
+
+// Add an event listener to the submit button
+submitButton.addEventListener("click", handleSubmit);
+
+function handleSubmit() {
+// Get the user's initials from the input element
+const userInitials = document.getElementById("initials").value;
+let currentPlayer ={
+    initials:userInitials,
+    userScore:score
+
+}}
+
