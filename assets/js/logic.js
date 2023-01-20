@@ -52,3 +52,29 @@ function endQuiz() {
   
 }
 
+// Create a displayQuestion function that will display the current question and choices
+
+let currentQuestion = 0;
+
+function displayQuestion() {
+
+  document.getElementById("questions").style.display = "block";
+// retrieve the current question from the questions array using currentQuestion as the index
+  const question = questions[currentQuestion];
+//   set the title of the current question to the innerHTML of the
+  const questionTitle = document.getElementById("question-title");
+  questionTitle.innerHTML = question.title;
+
+  const choices = document.getElementById("choices");
+  choices.innerHTML = "";
+
+  //   for loop to go through the questions array and update the HTML elements with the current question's title and choices.
+  for (let i = 0; i < question.choices.length; i++) {
+    const choice = question.choices[i];
+    const button = document.createElement("button");
+    button.innerHTML = choice;
+    button.addEventListener("click", checkAnswer);
+    choices.appendChild(button);
+  }
+}
+
