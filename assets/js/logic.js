@@ -143,5 +143,9 @@ storedHighscore.push(currentPlayer);
 localStorage.setItem("highScore",JSON.stringify(storedHighscore))
 
 //  reload the page to start quiz again
+
 location.reload()
+
+// clear input field on reload
+document.getElementById("initials").value = "";
 }
