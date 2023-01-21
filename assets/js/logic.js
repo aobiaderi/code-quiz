@@ -125,7 +125,11 @@ let currentPlayer ={
     userScore:score
 
 }
-
+ // Check if the user has entered a value in the input field
+ if (userInitials === "" ||) {
+    alert("Please enter your initials before submitting the score");
+    return;
+  }
 // store these details to an storedHighscore array 
 storedHighscore.push(currentPlayer);
 
