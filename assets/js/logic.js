@@ -126,7 +126,7 @@ let currentPlayer ={
 
 }
  // Check if the user has entered a value in the input field
- if (userInitials === "" ||) {
+ if (userInitials === "") {
     alert("Please enter your initials before submitting the score");
     return;
   }
