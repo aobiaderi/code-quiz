@@ -101,7 +101,7 @@ function checkAnswer(event) {
          //checks and then continues quiz if that is not the last question
     if (currentQuestion < questions.length) {
         displayQuestion();
-        // apply penalty per incorrect answer
+        // apply penalty per incorrect answer   
         if(timer > 0) 
             timer -=10;
             currentQuestion++;
@@ -129,6 +129,12 @@ let currentPlayer ={
  if (userInitials === "") {
     alert("Please enter your initials before submitting the score");
     return;
+  }
+
+// check if the string contains any non-alphabetic characters
+if (userInitials.match(/[^a-zA-Z]/)) {
+alert("Initials can only contain alphabetic characters.");
+return;
   }
 // store these details to an storedHighscore array 
 storedHighscore.push(currentPlayer);
